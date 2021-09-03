@@ -12,9 +12,8 @@ namespace TwoFactor.Classes
         /// <summary>
         /// Loads the settings from the file on the disk
         /// </summary>
-        /// <param name="new_settings_load"></param>
         /// <returns>The settings class</returns>
-        public static Settings Load(bool new_settings_load)
+        public static Settings Load()
         {
             var settings = new Settings();
 
