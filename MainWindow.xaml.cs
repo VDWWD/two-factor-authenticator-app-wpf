@@ -110,7 +110,6 @@ namespace TwoFactor
         /// </summary>
         public void InitAppStuff()
         {
-            bool new_settings_load = false;
             IsFirstLoad = true;
 
             //get the windows password
@@ -121,7 +120,6 @@ namespace TwoFactor
             {
                 var passw = new InputPassword();
                 passw.ShowDialog();
-                new_settings_load = true;
 
                 //check if the password save was succesful, needed if the close button on the InputPassword window is clicked
                 ww = Classes.WindowsPassword.GetPassword();
@@ -132,7 +130,7 @@ namespace TwoFactor
             }
 
             //load settings
-            Settings = Classes.Setting.Load(new_settings_load);
+            Settings = Classes.Setting.Load();
 
             //ask password on open
             if (Settings.ask_password_on_open)
