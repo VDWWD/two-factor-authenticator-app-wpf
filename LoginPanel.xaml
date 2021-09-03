@@ -1,0 +1,57 @@
+﻿<UserControl x:Class="TwoFactor.LoginPanel"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:xrpb="http://XamlRadialProgressBar/DotNet"
+             xmlns:local="clr-namespace:TwoFactor"
+             mc:Ignorable="d"
+             HorizontalAlignment="Stretch"
+             >
+    <DockPanel Width="auto">
+        <Grid>
+            <StackPanel>
+                <Button Click="Button_toclipboard_Click" Name="Button_toclipboard">
+                    <Button.Template>
+                        <ControlTemplate TargetType="Button">
+
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="40" />
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="*" />
+                                    <RowDefinition Height="34" />
+                                </Grid.RowDefinitions>
+
+                                <StackPanel Grid.Row="0" Grid.Column="0" Orientation="Horizontal">
+                                    <TextBlock Name="txt_title" Text="{Binding name}" VerticalAlignment="Center" FontSize="14" Foreground="{Binding color_text}" FontWeight="Bold" TextWrapping="Wrap"/>
+                                    <Button Name="Button_settings" VerticalAlignment="Center" Click="Button_settings_Click" Style="{StaticResource Button_Settings}" Margin="3, 2, 0, 0">
+                                        <DockPanel>
+                                            <Viewbox Width="16" Height="16">
+                                                <Canvas Width="24" Height="24">
+                                                    <Path x:Name="Icon_Settings" Fill="{Binding color_text}" Data="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" />
+                                                </Canvas>
+                                            </Viewbox>
+                                        </DockPanel>
+                                    </Button>
+                                </StackPanel>
+
+                                <TextBlock Name="txt_number" Grid.Row="1" Grid.Column="0" FontSize="30" Text="{Binding number}" Foreground="{Binding color_number}" />
+
+                                <xrpb:RadialProgressBar VerticalAlignment="Bottom" Grid.Row="0" Grid.Column="1" Grid.RowSpan="2" Margin="0,0,0,-3" Height="40" Width="40" ArcMode="Pie" Value="{Binding percentage, UpdateSourceTrigger=PropertyChanged}" Foreground="{StaticResource ProgressBarRadialGradientBrush}"/>
+                            </Grid>
+
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+                <Rectangle Height="1" Margin="0, 15, 0, 10" Name="horizontal_line"></Rectangle>
+            </StackPanel>
+            <Border BorderBrush="{x:Null}" Height="56" Background="#d9fcc9" VerticalAlignment="top" Opacity="0.9" Visibility="Hidden" Name="txt_copied_container">
+                <TextBlock HorizontalAlignment="Stretch" VerticalAlignment="Center" Text="[copied]" TextAlignment="Center"  Name="txt_copied" Foreground="#308c07" FontWeight="Bold" FontSize="18" />
+            </Border>
+        </Grid>
+    </DockPanel>
+    
+</UserControl>

@@ -1,0 +1,80 @@
+﻿<controls:MetroWindow 
+        x:Class="TwoFactor.MainWindow"
+        xmlns:tb="http://www.hardcodet.net/taskbar"    
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:controls="http://metro.mahapps.com/winfx/xaml/controls"
+        xmlns:Dialog="clr-namespace:MahApps.Metro.Controls.Dialogs;assembly=MahApps.Metro"
+        xmlns:controlzex="urn:controlzex"
+        xmlns:local="clr-namespace:TwoFactor"
+        xmlns:xrpb="http://XamlRadialProgressBar/DotNet"
+        mc:Ignorable="d"
+        WindowTransitionsEnabled="False"
+        Title="[appname]"
+        Height="465" 
+        MinHeight="465"  
+        Width="340" 
+        MinWidth="340"   
+        TitleCharacterCasing="Normal"
+        WindowStartupLocation="Manual"
+        Background="{StaticResource White}"
+        NonActiveWindowTitleBrush="{StaticResource PaarseKleurLicht}"
+        NonActiveBorderBrush="{StaticResource PaarseKleurLicht}"
+    >
+    <controls:MetroWindow.RightWindowCommands>
+        <controls:WindowCommands>
+            <Button Click="Button_about_Click" Name="button_about">
+                <Button.ToolTip>
+                    <ToolTip controlzex:ToolTipAssist.AutoMove="True" Name="tt_overAppHeader" Style="{StaticResource ToolTip_Normal}" Content="[tooltip]" />
+                </Button.ToolTip>
+            </Button>
+            <Button Click="Button_pin_Click" Name="button_unpinned">
+                <Button.ToolTip>
+                    <ToolTip controlzex:ToolTipAssist.AutoMove="True" Name="tt_UnPinned" Style="{StaticResource ToolTip_Normal}" Content="[tooltip]" />
+                </Button.ToolTip>
+            </Button>
+            <Button Click="Button_pin_Click" Name="button_pinned" Visibility="Collapsed">
+                <Button.ToolTip>
+                    <ToolTip controlzex:ToolTipAssist.AutoMove="True" Name="tt_Pinned" Style="{StaticResource ToolTip_Normal}" Content="[tooltip]" />
+                </Button.ToolTip>
+            </Button>
+        </controls:WindowCommands>
+    </controls:MetroWindow.RightWindowCommands>
+    <controls:MetroWindow.WindowButtonCommands>
+        <controls:WindowButtonCommands
+            Name="WindowButtons"
+            Minimize="[minimize appname]"
+            Maximize="[maximize appname]"
+            Restore="[restore appname]"
+            Close="[close appname]"
+         />
+    </controls:MetroWindow.WindowButtonCommands>
+    <DockPanel LastChildFill="True" HorizontalAlignment="Stretch" Name="dockpanel_main">
+        <Grid>
+            <ScrollViewer HorizontalScrollBarVisibility="Hidden" VerticalScrollBarVisibility="Auto" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="0,0,5,0">
+                <StackPanel VerticalAlignment="Top" HorizontalAlignment="Stretch" Margin="10" Name="stackpanel_logins">
+
+                </StackPanel>
+            </ScrollViewer>
+
+            <Button Name="button_qr_desktop" HorizontalAlignment="Center" VerticalAlignment="Bottom" Click="Button_qr_desktop_Click" Margin="0, 0, 70, 5" Style="{StaticResource Button_Settings}">
+                <Button.ToolTip>
+                    <ToolTip controlzex:ToolTipAssist.AutoMove="True" Name="tt_Button_desktop_qr" Style="{StaticResource ToolTip_Normal}" Content="[tooltip]" />
+                </Button.ToolTip>
+            </Button>
+            <Button Name="button_qr_file" HorizontalAlignment="Center" VerticalAlignment="Bottom" Click="Button_qr_file_Click" Margin="0, 0, 0, 5" Style="{StaticResource Button_Settings}">
+                <Button.ToolTip>
+                    <ToolTip controlzex:ToolTipAssist.AutoMove="True" Name="tt_Button_file_qr" Style="{StaticResource ToolTip_Normal}" Content="[tooltip]" />
+                </Button.ToolTip>
+            </Button>
+            <Button Name="button_settings" HorizontalAlignment="Center" VerticalAlignment="Bottom" Click="Button_settings_Click" Margin="60, 0, 0, 5" Style="{StaticResource Button_Settings}">
+                <Button.ToolTip>
+                    <ToolTip controlzex:ToolTipAssist.AutoMove="True" Name="tt_Button_settings" Style="{StaticResource ToolTip_Normal}" Content="[tooltip]" />
+                </Button.ToolTip>
+            </Button>            
+
+        </Grid>
+    </DockPanel>
+</controls:MetroWindow>
