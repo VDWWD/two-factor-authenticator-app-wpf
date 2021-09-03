@@ -1,3 +1,7 @@
+WPF desktop app of a 2 factor authenticator that scans a QR code one time and then generates a 6 digit code every 30 seconds.
+
+----------
+
 The extra libraries needed to run this app are included as an embedded resource so the app can run as a single .exe file in a folder without dll's.
 These are loaded in the App.xaml.cs > Main() with AppDomain.CurrentDomain.AssemblyResolve += (sender, args) =>
 
