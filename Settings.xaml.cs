@@ -56,12 +56,12 @@ namespace TwoFactor
                 txt_label3.Foreground = Classes.ResourceController.BrushDarkModeText;
                 txt_warning.Foreground = Classes.ResourceController.BrushDarkModeText;
 
-                button_close.Content = Classes.IconController.GetButtonIcon(Classes.Enums.Icon.Save, Classes.ResourceController.BrushBlack, Localizer.GetLocalized("editlogin-save"));
+                button_save.Content = Classes.IconController.GetButtonIcon(Classes.Enums.Icon.Save, Classes.ResourceController.BrushBlack, Localizer.GetLocalized("editlogin-save"));
                 button_export.Content = Classes.IconController.GetButtonIcon(Classes.Enums.Icon.Export, Classes.ResourceController.BrushBlack, Localizer.GetLocalized("settings-export"));
             }
             else
             {
-                button_close.Content = Classes.IconController.GetButtonIcon(Classes.Enums.Icon.Save, Classes.ResourceController.BrushWhite, Localizer.GetLocalized("editlogin-save"));
+                button_save.Content = Classes.IconController.GetButtonIcon(Classes.Enums.Icon.Save, Classes.ResourceController.BrushWhite, Localizer.GetLocalized("editlogin-save"));
                 button_export.Content = Classes.IconController.GetButtonIcon(Classes.Enums.Icon.Export, Classes.ResourceController.BrushWhite, Localizer.GetLocalized("settings-export"));
             }
 

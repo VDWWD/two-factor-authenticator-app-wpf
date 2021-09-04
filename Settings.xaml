@@ -56,7 +56,7 @@
 
         <controls:ToggleSwitch Grid.Column="0" Grid.Row="5" IsOn="False" VerticalAlignment="Bottom" Name="toggle_askpass" Style="{DynamicResource ToggleSwitch_Normal}" />
 
-        <Button Grid.Column="0" Grid.Row="7" HorizontalAlignment="Left" Click="Button_save_Click"  Width="105" Height="30" Style="{StaticResource Button_Normal}" Name="button_close" />
+        <Button Grid.Column="0" Grid.Row="7" HorizontalAlignment="Left" Click="Button_save_Click"  Width="105" Height="30" Style="{StaticResource Button_Normal}" Name="button_save" />
 
         <Button Grid.Column="0" Grid.Row="7" HorizontalAlignment="right" Click="Button_export_Click" Width="105" Height="30" Style="{StaticResource Button_Normal}" Name="button_export" />
 
