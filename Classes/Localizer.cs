@@ -206,7 +206,7 @@ namespace TwoFactor
                 {
                     key = "editlogin-delete-confirm",
                     nl = "Weet je zeker dat je login \"{0}\" wil verwijderden?",
-                    en = "Are you sure you want to delete the login \"{0}\"",
+                    en = "Are you sure you want to delete the login \"{0}\"?",
                     de = ""
                 },
                 new LanguageEntry()
