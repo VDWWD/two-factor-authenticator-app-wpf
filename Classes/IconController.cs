@@ -13,7 +13,7 @@ namespace TwoFactor.Classes
     public class IconController
     {
         /// <summary>
-        /// 
+        /// Find an icon and return its path
         /// </summary>
         /// <param name="icon">The icon name in Enum</param>
         /// <param name="color">The color for the icon as Brush</param>
@@ -32,7 +32,7 @@ namespace TwoFactor.Classes
         /// <param name="color">The color for the icon as Brush</param>
         /// <param name="text">The text in the button</param>
         /// <param name="opacity">Transparency of the icon, only used in the MainWindow icon at the bottom</param>
-        /// <returns></returns>
+        /// <returns>A dockpanel with text an icon for the button</returns>
         public static DockPanel GetButtonIcon(Enums.Icon icon, Brush color, string text, double opacity = 1)
         {
             var item = IconList().Where(x => x.icon == icon).FirstOrDefault();
@@ -42,6 +42,7 @@ namespace TwoFactor.Classes
             var margin = new Thickness(3, -1, 6, 0);
             var path = item.GetPath(color);
 
+            //set opacity
             if (opacity < 1)
             {
                 path.Opacity = opacity;
