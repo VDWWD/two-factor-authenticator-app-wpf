@@ -1,3 +1,5 @@
+# Two Factor Authenticator App in WPF
+
 WPF desktop app of a 2 factor authenticator that scans a QR code one time and then generates a 6 digit code every 30 seconds.
 
 ----------
