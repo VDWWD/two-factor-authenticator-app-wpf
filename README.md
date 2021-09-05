@@ -12,3 +12,7 @@ To include libraries as resource they need to be strongly named but are not when
 In order to maintain transparency i did not download and recompile those libraries myself, but included them as code files so everyone can see that no changes were made.
 
 More info: https://www.vanderwaal.eu/mini-projecten/two-factor-authenticator-app-wpf
+
+&nbsp;
+
+<img src="https://www.vanderwaal.eu/files/two-factor-authenticator-app-wpf.jpg">
