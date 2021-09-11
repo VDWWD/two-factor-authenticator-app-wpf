@@ -5,6 +5,7 @@ using System.Windows;
 using System.Windows.Media;
 using System.Windows.Shapes;
 using System.Windows.Controls;
+using System.Windows.Input;
 
 namespace TwoFactor.Classes
 {
@@ -169,6 +170,26 @@ namespace TwoFactor.Classes
                     Fill = brush,
                     Data = Geometry.Parse(path)
                 };
+            }
+        }
+
+
+
+        public class FaviconDoubleClickCommand : ICommand
+        {
+            public bool CanExecute(object parameter)
+            {
+                return true;
+            }
+            public event EventHandler CanExecuteChanged
+            {
+                add { CommandManager.RequerySuggested += value; }
+                remove { CommandManager.RequerySuggested -= value; }
+            }
+
+            public void Execute(object parameter)
+            {
+                ((MainWindow)Application.Current.MainWindow).NormalWindow();
             }
         }
     }
